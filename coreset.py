@@ -14,7 +14,7 @@ findspark.init()
 # sc = SparkContext(conf=conf)
 spark = SparkSession.builder.getOrCreate()
 
-k = 15
+k = 10
 d = 3
 a = 1
 eps = 0.001
