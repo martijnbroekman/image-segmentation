@@ -1,5 +1,6 @@
 from pyspark import SparkContext, SparkConf
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import col
 from pyspark.ml.clustering import KMeans
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.linalg import Vectors
@@ -13,10 +14,10 @@ findspark.init()
 # sc = SparkContext(conf=conf)
 spark = SparkSession.builder.getOrCreate()
 
-k = 2
+k = 15
 d = 3
 a = 1
-eps = 0.1
+eps = 0.001
 max_iterations = 10
 
 def get_image_array():
@@ -36,7 +37,7 @@ for x in range(width):
         r = rgb[0]
         g = rgb[1]
         b = rgb[2]
-        data.append((x, y, r, g, b, Vectors.dense(int(r), int(g), int(b))))
+        data.append((x, y, r, g, b, Vectors.dense(float(r), float(g), float(b))))
 
 # Add index and weight to data
 df = spark.createDataFrame(data, ["x", "y", "r", "g", "b", "features"])
@@ -55,7 +56,6 @@ kmeans = KMeans(k=k)
 kmeans.setSeed(1)
 kmeans.setWeightCol("weighCol")
 kmeans.setMaxIter(max_iterations)
-kmeans.clear(kmeans.maxIter)
 model = kmeans.fit(df)
 model.predict(df.head().features)
 centers = model.clusterCenters()
@@ -159,3 +159,44 @@ while len(c) > 1:
     rdd = rdd.map(coreset)
     c = rdd.collect()
 print(c)
+
+# Do kmeans on coreset
+S_core = []
+for i in c[0][1]:
+    S_core.append((float(i[0]), Vectors.dense(i[1], i[2], i[3])))
+
+df_core = spark.createDataFrame(S_core, ['weighCol', 'features'])
+kmeans = KMeans(k=k)
+kmeans.setSeed(1)
+kmeans.setWeightCol("weighCol")
+kmeans.setMaxIter(max_iterations)
+model = kmeans.fit(df_core)
+model.predict(df.head().features)
+centers_core = model.clusterCenters()
+summary_core = model.summary
+rows = model.transform(df).select("x", "y", "r", "g", "b", "prediction")
+
+# get image segmentation using coreset
+value = np.empty((), dtype='uint8, uint8, uint8')
+value[()] = (0, 0, 0)
+compressed_array = np.full((height, width), value, dtype='uint8, uint8, uint8')
+
+colors = {}
+for i in range(min(len(S_core), k)):
+    s = rows.filter(col("prediction") == i).rdd.first()
+
+    # Set RGB values as a tuple
+    colors[i] = (s[2], s[3], s[4])
+
+row_data = rows.collect()
+for i in range(len(row_data)):
+    row = row_data[i]
+    color = colors[row.prediction]
+    compressed_array[int(row.y), int(row.x)] = color
+
+
+image_from_rgb = Image.fromarray(compressed_array, 'RGB')
+image_from_rgb.show()
+
+print(centers, centers_core)
+print(summary.clusterSizes, summary.trainingCost)

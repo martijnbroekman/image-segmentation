@@ -5,6 +5,8 @@ from pyspark.ml.linalg import Vectors
 from pyspark.ml.clustering import KMeans
 import numpy as np
 from PIL import Image
+import findspark
+findspark.init()
 
 k = 8
 max_iterations = 10
@@ -30,7 +32,6 @@ def build_model(data):
 
     kmeans.setMaxIter(max_iterations)
 
-    kmeans.clear(kmeans.maxIter)
     model = kmeans.fit(df)
 
     model.setPredictionCol("prediction")
@@ -49,7 +50,7 @@ for x in range(width):
         r = rgb[0]
         g = rgb[1]
         b = rgb[2]
-        data.append((x, y, r, g, b, Vectors.dense(int(r), int(g), int(b))))
+        data.append((x, y, r, g, b, Vectors.dense(float(r), float(g), float(b))))
 
 rows = build_model(data)
 
