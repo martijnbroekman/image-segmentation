@@ -110,9 +110,9 @@ def coreset(points):
                     # was already a point in this gridcell then add these weights too. Delete the point from points.
                     if ri and gi and bi:
                         try:
-                            dct[ri, gi, bi] = np.array([dct[ri, gi, bi][0] + point[0] * len(np.where((points == point).all(axis=1))[0]), point[1], point[2], point[3]])
+                            dct[ri, gi, bi] = np.array([dct[ri, gi, bi][0] + sum(points[(np.where((points == point).all(axis=1))[0])][:,0]), point[1], point[2], point[3]])
                         except KeyError:
-                            dct[ri, gi, bi] = np.array([point[0] * len(np.where((points == point).all(axis=1))[0]), point[1], point[2], point[3]])
+                            dct[ri, gi, bi] = np.array([sum(points[(np.where((points == point).all(axis=1))[0])][:,0]), point[1], point[2], point[3]])
 
                         points = np.delete(points, np.where((points == point).all(axis=1)), 0)
 
