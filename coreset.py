@@ -30,8 +30,6 @@ def get_image_array(image_name):
 
     return pix, width, height
 
-
-
 def combineValues1(range, value):
     newRange = []
     for item in range:
