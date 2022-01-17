@@ -1,0 +1,54 @@
+C:\Users\20202958\source\repos\kmeansplus\Tiger\coreset\eps0.01a1
+tiger-1024.jpeg 92.21343994140625
+tiger-512.jpeg 93.35556030273438
+tiger-256.jpeg 76.35345458984375
+tiger-128.jpeg 98.33984375
+tiger-64.jpeg 99.8779296875
+C:\Users\20202958\source\repos\kmeansplus\Tiger\coreset\eps0.01a10
+tiger-1024.jpeg 94.12498474121094
+tiger-512.jpeg 95.4681396484375
+tiger-256.jpeg 94.6014404296875
+tiger-128.jpeg 99.62158203125
+tiger-64.jpeg 99.8779296875
+C:\Users\20202958\source\repos\kmeansplus\Tiger\coreset\eps0.01a100
+tiger-1024.jpeg 91.21675491333008
+tiger-512.jpeg 92.04216003417969
+tiger-256.jpeg 93.55621337890625
+tiger-128.jpeg 99.15771484375
+tiger-64.jpeg 99.8779296875
+C:\Users\20202958\source\repos\kmeansplus\Tiger\coreset\eps0.1a1
+tiger-1024.jpeg 92.21343994140625
+tiger-512.jpeg 93.35556030273438
+tiger-256.jpeg 76.35345458984375
+tiger-128.jpeg 98.33984375
+tiger-64.jpeg 99.8779296875
+C:\Users\20202958\source\repos\kmeansplus\Tiger\coreset\eps0.1a10
+tiger-1024.jpeg 94.12498474121094
+tiger-512.jpeg 95.4681396484375
+tiger-256.jpeg 94.6014404296875
+tiger-128.jpeg 99.62158203125
+tiger-64.jpeg 99.8779296875
+C:\Users\20202958\source\repos\kmeansplus\Tiger\coreset\eps0.1a100
+tiger-1024.jpeg 91.21675491333008
+tiger-512.jpeg 92.04216003417969
+tiger-256.jpeg 93.55621337890625
+tiger-128.jpeg 99.15771484375
+tiger-64.jpeg 99.8779296875
+C:\Users\20202958\source\repos\kmeansplus\Tiger\coreset\eps1a1
+tiger-1024.jpeg 92.21343994140625
+tiger-512.jpeg 93.35556030273438
+tiger-256.jpeg 76.35345458984375
+tiger-128.jpeg 98.33984375
+tiger-64.jpeg 99.8779296875
+C:\Users\20202958\source\repos\kmeansplus\Tiger\coreset\eps1a10
+tiger-1024.jpeg 94.12498474121094
+tiger-512.jpeg 95.4681396484375
+tiger-256.jpeg 94.6014404296875
+tiger-128.jpeg 99.62158203125
+tiger-64.jpeg 99.8779296875
+C:\Users\20202958\source\repos\kmeansplus\Tiger\coreset\eps1a100
+tiger-1024.jpeg 91.21675491333008
+tiger-512.jpeg 92.04216003417969
+tiger-256.jpeg 93.55621337890625
+tiger-128.jpeg 99.15771484375
+tiger-64.jpeg 99.8779296875

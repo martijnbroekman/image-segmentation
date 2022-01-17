@@ -1,0 +1,54 @@
+C:\Users\20202958\source\repos\kmeansplus\Fruit\coreset\eps0.01a1
+fruit-1024.jpg 93.95647048950195
+fruit-512.jpg 95.18966674804688
+fruit-256.jpg 84.21173095703125
+fruit-128.jpg 31.33544921875
+fruit-64.jpg 94.384765625
+C:\Users\20202958\source\repos\kmeansplus\Fruit\coreset\eps0.01a10
+fruit-1024.jpg 94.44875717163086
+fruit-512.jpg 95.25985717773438
+fruit-256.jpg 99.40032958984375
+fruit-128.jpg 99.981689453125
+fruit-64.jpg 99.90234375
+C:\Users\20202958\source\repos\kmeansplus\Fruit\coreset\eps0.01a100
+fruit-1024.jpg 92.21153259277344
+fruit-512.jpg 93.35479736328125
+fruit-256.jpg 99.47662353515625
+fruit-128.jpg 99.98779296875
+fruit-64.jpg 95.4345703125
+C:\Users\20202958\source\repos\kmeansplus\Fruit\coreset\eps0.1a1
+fruit-1024.jpg 93.95647048950195
+fruit-512.jpg 95.18966674804688
+fruit-256.jpg 84.21173095703125
+fruit-128.jpg 31.33544921875
+fruit-64.jpg 94.384765625
+C:\Users\20202958\source\repos\kmeansplus\Fruit\coreset\eps0.1a10
+fruit-1024.jpg 94.44875717163086
+fruit-512.jpg 95.25985717773438
+fruit-256.jpg 99.40032958984375
+fruit-128.jpg 99.981689453125
+fruit-64.jpg 99.90234375
+C:\Users\20202958\source\repos\kmeansplus\Fruit\coreset\eps0.1a100
+fruit-1024.jpg 92.21153259277344
+fruit-512.jpg 93.35479736328125
+fruit-256.jpg 99.47662353515625
+fruit-128.jpg 99.98779296875
+fruit-64.jpg 95.4345703125
+C:\Users\20202958\source\repos\kmeansplus\Fruit\coreset\eps1a1
+fruit-1024.jpg 93.95647048950195
+fruit-512.jpg 95.18966674804688
+fruit-256.jpg 84.21173095703125
+fruit-128.jpg 31.33544921875
+fruit-64.jpg 94.384765625
+C:\Users\20202958\source\repos\kmeansplus\Fruit\coreset\eps1a10
+fruit-1024.jpg 94.44875717163086
+fruit-512.jpg 95.25985717773438
+fruit-256.jpg 99.40032958984375
+fruit-128.jpg 99.981689453125
+fruit-64.jpg 99.90234375
+C:\Users\20202958\source\repos\kmeansplus\Fruit\coreset\eps1a100
+fruit-1024.jpg 92.21153259277344
+fruit-512.jpg 93.35479736328125
+fruit-256.jpg 99.47662353515625
+fruit-128.jpg 99.98779296875
+fruit-64.jpg 95.4345703125
